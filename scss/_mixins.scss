@@ -1,0 +1,68 @@
+h1{
+    background-color: map-get($map: $paleta, $key: 'primero' );
+    background-attachment: fixed;
+}
+
+h2{
+    background-color: map-get($map: $paleta, $key:'segundo' );
+    color: map-get($map: $paleta, $key:'cuarto' );
+}
+
+h3{
+    color: map-get($map: $paleta, $key:'primero');
+}
+
+
+@mixin texto($align, $margin, $color, $backgroundcolor,$fontsize){
+    text-align: $align;
+    margin: $margin;
+    color: $color;
+    background-color: $backgroundcolor;
+    font-size: $fontsize;
+}
+
+h4{
+    @include texto(center, 5px, (map-get($map: $paleta, $key: 'cuarto')), (map-get($map: $paleta, $key: 'tercero')),40px);
+    text-decoration-line: underline;
+}
+
+h5{
+    @include texto(center, 5px, (map-get($map: $paleta, $key: 'cuarto')), (map-get($map: $paleta, $key: 'quinto')), 40px )
+}
+
+.bg-fondo{
+    background-color: map-get($map:$paleta, $key:'sexto');  
+}
+
+.bg-boton{
+    @extend .bg-fondo;
+    background-color: map-get($map:$paleta, $key:'septimo');
+    color:map-get($map:$paleta, $key:'cuarto');
+}
+
+.bg-botonofertas{
+    @extend .bg-boton;
+    background-color: map-get($map: $paleta, $key: 'octavo' );
+}
+
+.card-image-x{
+    size: 50%;
+}
+
+.link-color{
+    color: map-get($map: $paleta, $key:'noveno' );
+}
+
+.nav-link-color{
+    color: map-get($map: $paleta, $key: 'noveno');
+    margin-left: 20px;
+    padding: 0;
+}
+.bg-footer{
+    font-size: 25px;
+    color: map-get($map: $paleta, $key: 'cuarto');
+    background-color: map-get($map: $paleta, $key:'decimo' );
+}
+
+
+

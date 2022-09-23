@@ -1,0 +1,8 @@
+
+@import "_vars.scss";
+@import "_mixins.scss";
+
+body{
+    background-image: map-get($map: $imagenes, $key:'fondo');
+}
+
